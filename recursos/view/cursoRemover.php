@@ -47,7 +47,7 @@
             <div class="modal-dialog modal-md">
                 <div class="modal-content">
                     <div class="modal-body">
-                        <h3> Deseja remover o aluno? <br><br><b><?php echo $_GET['nome']; ?></b></h3>
+                        <h3> Deseja remover o curso? <br><br><b><?php echo $_GET['nome']; ?></b></h3>
                     </div>
                     <div class="modal-footer">
 

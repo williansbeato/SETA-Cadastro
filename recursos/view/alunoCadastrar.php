@@ -75,7 +75,7 @@
         </form>
 
 	<div class="page-header">
-		<b>&copy;2020&nbsp;&nbsp;&raquo;&nbsp;&nbsp; Gil Eduardo de Andrade</b>
+		<b>&copy;2020&nbsp;&nbsp;&raquo;&nbsp;&nbsp; Will</b>
 	</div>
     </div> <!-- /container -->
   </body>

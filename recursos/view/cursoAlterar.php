@@ -39,7 +39,7 @@
 	<div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
               <li class="active">
-                      <a href="aluno.php"> Aluno </a>
+                      <a href="curso.php"> Curso </a>
               </li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -50,11 +50,11 @@
 
         <div class="page-header">
             <h2 class="form-signin-heading">
-                <div id="m_texto"> Alterar Aluno </div>
+                <div id="m_texto"> Alterar Curso </div>
             </h2>
         </div>
 
-        <form class="form" method="post" action="alunoAlterar.php">
+        <form class="form" method="post" action="cursoAlterar.php">
             <input TYPE="hidden" NAME="form_submit" VALUE="OK">
 
             <div class='row'>
@@ -63,12 +63,12 @@
                     <input type="text" name="nome" value="<?php echo $_GET['nome']; ?>" class="form-control">
                 </div>
                 <div class="col-sm-3">
-                    <label>Curso: </label>
-                    <input type="text" name="curso" value="<?php echo $_GET['curso']; ?>" class="form-control">
+                    <label>Área / Eixo: </label>
+                    <input type="text" name="curso" value="<?php echo $_GET['area_eixo']; ?>" class="form-control">
                 </div>
                 <div class="col-sm-3">
-                    <label>Turma: </label>
-                    <input type="text" name="turma" value="<?php echo $_GET['turma']; ?>" class="form-control">
+                    <label>Nível: </label>
+                    <input type="text" name="turma" value="<?php echo $_GET['nivel']; ?>" class="form-control">
                 </div>
             </div>
             <br>

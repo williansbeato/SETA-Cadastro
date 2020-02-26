@@ -39,7 +39,7 @@
 	<div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
               <li class="active">
-                      <a href="aluno.php"> Aluno </a>
+                   <a href="main.php"> Home </a>
               </li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -50,36 +50,37 @@
 
         <div class="page-header">
             <h2 class="form-signin-heading">
-                <div id="m_texto"> Alterar Aluno </div>
+                <div id="m_texto"> Cursos Cadastrados </div>
             </h2>
         </div>
 
-        <form class="form" method="post" action="alunoAlterar.php">
+        <form class="form" method="post" action="curso.php">
             <input TYPE="hidden" NAME="form_submit" VALUE="OK">
 
-            <div class='row'>
-                <div class="col-sm-6">
-                    <label>Nome: </label>
-                    <input type="text" name="nome" value="<?php echo $_GET['nome']; ?>" class="form-control">
-                </div>
-                <div class="col-sm-3">
-                    <label>Curso: </label>
-                    <input type="text" name="curso" value="<?php echo $_GET['curso']; ?>" class="form-control">
-                </div>
-                <div class="col-sm-3">
-                    <label>Turma: </label>
-                    <input type="text" name="turma" value="<?php echo $_GET['turma']; ?>" class="form-control">
-                </div>
-            </div>
-            <br>
-            <button type="submit" name="acao" value="confirmar/<?php echo $_GET['id']; ?>" class="btn btn-success btn-block">
-                <b>Confirmar Alteração</b>
+            <button type="submit" name="acao" value="cadastrar/0" class="btn btn-primary btn-block">
+                <b>Cadastrar Novo Curso</b>
             </button>
+            <br>
+            <table class='table table-striped'>
+                <thead>
+                    <tr>
+                        <th>NOME</th>
+                        <th>ÁREA / EIXO</th>
+                        <th>NÍVEL</th>
+                        <th>AÇÕES</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                     //
+                    ?>
+                </tbody>
+            </table>
         </form>
 
 	<div class="page-header">
 		<b>&copy;2020&nbsp;&nbsp;&raquo;&nbsp;&nbsp; Will</b>
 	</div>
-    </div> <!-- /container -->
+    </div>
   </body>
 </html>
