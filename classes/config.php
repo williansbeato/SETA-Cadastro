@@ -4,7 +4,7 @@
 
         //localhost/3306
         // Nome do DB
-        const DB_NOME = 'aula02';
+        const DB_NOME = 'aula002';
         // Usuário do DB
         const DB_USUARIO = 'root';
         // Senha do DB

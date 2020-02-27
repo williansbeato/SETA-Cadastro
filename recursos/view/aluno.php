@@ -72,7 +72,7 @@
                 </thead>
                 <tbody>
                     <?php
-                        CAluno::loadTabelaAlunos();
+                      CAluno::loadTabelaAlunos();
                     ?>
                 </tbody>
             </table>

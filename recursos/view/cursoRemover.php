@@ -3,7 +3,7 @@
     include_once '../../global.php';
 
     if( !empty($_POST['form_submit']) ) {
-        CAluno::rota();
+        CCurso::rota();
     }
 ?>
 
@@ -42,7 +42,7 @@
 
     <div class="container theme-showcase" role="main">
 
-        <form class="form" method="post" action="aluno.php">
+        <form class="form" method="post" action="curso.php">
             <input TYPE="hidden" NAME="form_submit" VALUE="OK">
             <div class="modal-dialog modal-md">
                 <div class="modal-content">
@@ -52,7 +52,7 @@
                     <div class="modal-footer">
 
                         <button type="submit" name="acao" value="finalizar/<?php echo $_GET['id']; ?>" class="btn btn-success">Sim</button>
-                        <a href="aluno.php" type="button" class="btn btn-danger">Não</a>
+                        <a href="curso.php" type="button" class="btn btn-danger">Não</a>
                     </div>
                 </div>
             </div>

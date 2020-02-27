@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `aula02`
+-- Database: `aula002`
 --
 
 -- --------------------------------------------------------
@@ -33,6 +33,25 @@ CREATE TABLE `tb_alunos` (
   `nome` varchar(100) CHARACTER SET utf8 NOT NULL,
   `curso` varchar(80) CHARACTER SET utf16 NOT NULL,
   `turma` varchar(30) CHARACTER SET utf8 NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Estrutura da tabela `tb_cursos`
+--
+CREATE TABLE `tb_cursos` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(100) CHARACTER SET utf8 NOT NULL,
+  `area_eixo` varchar(100) CHARACTER SET utf8 NOT NULL,
+  `nivel` varchar(100) CHARACTER SET utf8 NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Estrutura da tabela `tb_turmas`
+--
+CREATE TABLE `tb_turmas` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(100) CHARACTER SET utf8 NOT NULL,
+  `ano` varchar(100) CHARACTER SET utf8 NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -61,6 +80,18 @@ ALTER TABLE `tb_alunos`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tb_cursos`
+--
+ALTER TABLE `tb_cursos`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tb_turmas`
+--
+ALTER TABLE `tb_turmas`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -71,6 +102,19 @@ ALTER TABLE `tb_alunos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 COMMIT;
 
+--
+-- AUTO_INCREMENT for table `tb_cursos`
+--
+ALTER TABLE `tb_cursos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+COMMIT;
+
+--
+-- AUTO_INCREMENT for table `tb_turmas`
+--
+ALTER TABLE `tb_turmas`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

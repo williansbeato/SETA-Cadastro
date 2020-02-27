@@ -3,7 +3,7 @@
     include_once '../../global.php';
 
     if( !empty($_POST['form_submit']) ) {
-        CAluno::rota();
+        CCurso::rota();
     }
 ?>
 
@@ -61,11 +61,11 @@
                 </div>
                 <div class="col-sm-3">
                     <label>Área / Eixo: </label>
-                    <input type="text" name="curso" class="form-control">
+                    <input type="text" name="area_eixo" class="form-control">
                 </div>
                 <div class="col-sm-3">
                     <label>Nível: </label>
-                    <input type="text" name="turma" class="form-control">
+                    <input type="text" name="nivel" class="form-control">
                 </div>
             </div>
             <br>

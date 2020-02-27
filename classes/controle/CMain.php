@@ -16,7 +16,7 @@
                 CAluno::index();
             }
             else if(strcmp($dados[0], "curso") == 0) {
-                // CCurso::index();
+                 CCurso::index();
             }
             else if(strcmp($dados[0], "turma") == 0) {
                 // CTurma::index();

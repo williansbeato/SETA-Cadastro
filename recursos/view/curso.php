@@ -3,7 +3,7 @@
     include_once '../../global.php';
 
     if( !empty($_POST['form_submit']) ) {
-        CAluno::rota();
+        CCurso::rota();
     }
 ?>
 
@@ -72,7 +72,7 @@
                 </thead>
                 <tbody>
                     <?php
-                     //
+                      CCurso::loadTabelaCursos();
                     ?>
                 </tbody>
             </table>
