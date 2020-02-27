@@ -19,7 +19,7 @@
                  CCurso::index();
             }
             else if(strcmp($dados[0], "turma") == 0) {
-                // CTurma::index();
+                 CTurma::index();
             }
         }
     }

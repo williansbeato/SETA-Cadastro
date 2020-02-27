@@ -3,7 +3,7 @@
     include_once '../../global.php';
 
     if( !empty($_POST['form_submit']) ) {
-        CAluno::rota();
+        CTurma::rota();
     }
 ?>
 
@@ -54,7 +54,7 @@
             </h2>
         </div>
 
-        <form class="form" method="post" action="curso.php">
+        <form class="form" method="post" action="turma.php">
             <input TYPE="hidden" NAME="form_submit" VALUE="OK">
 
             <button type="submit" name="acao" value="cadastrar/0" class="btn btn-primary btn-block">
@@ -71,7 +71,7 @@
                 </thead>
                 <tbody>
                     <?php
-                     //
+                       CTurma::loadTabelaTurmas();
                     ?>
                 </tbody>
             </table>

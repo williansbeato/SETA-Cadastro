@@ -3,7 +3,7 @@
     include_once '../../global.php';
 
     if( !empty($_POST['form_submit']) ) {
-        CAluno::rota();
+        CTurma::rota();
     }
 ?>
 
@@ -64,7 +64,7 @@
                 </div>
                 <div class="col-sm-3">
                     <label>Ano: </label>
-                    <input type="text" name="curso" value="<?php echo $_GET['ano']; ?>" class="form-control">
+                    <input type="text" name="ano" value="<?php echo $_GET['ano']; ?>" class="form-control">
                 </div>
             </div>
             <br>
