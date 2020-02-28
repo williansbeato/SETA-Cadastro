@@ -12,5 +12,5 @@
         // Charset da conexão PDO
         const DB_CHARSET = 'utf8';
 		// TRUE - Apresentar erros / FALSE - Não apresentar erros
-        const DEBUG = true;
+        const DEBUG = false;
     }

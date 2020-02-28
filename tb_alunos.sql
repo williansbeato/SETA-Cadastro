@@ -31,9 +31,9 @@ SET time_zone = "+00:00";
 CREATE TABLE `tb_alunos` (
   `id` int(11) NOT NULL,
   `nome` varchar(100) CHARACTER SET utf8 NOT NULL,
-  `curso` varchar(80) CHARACTER SET utf16 NOT NULL,
-  `turma` varchar(30) CHARACTER SET utf8 NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `curso` varchar(100) CHARACTER SET utf8 NOT NULL,
+  `turma` varchar(100) CHARACTER SET utf8 NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Estrutura da tabela `tb_cursos`
@@ -43,7 +43,7 @@ CREATE TABLE `tb_cursos` (
   `nome` varchar(100) CHARACTER SET utf8 NOT NULL,
   `area_eixo` varchar(100) CHARACTER SET utf8 NOT NULL,
   `nivel` varchar(100) CHARACTER SET utf8 NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Estrutura da tabela `tb_turmas`
@@ -52,7 +52,7 @@ CREATE TABLE `tb_turmas` (
   `id` int(11) NOT NULL,
   `nome` varchar(100) CHARACTER SET utf8 NOT NULL,
   `ano` varchar(100) CHARACTER SET utf8 NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `tb_alunos`
@@ -60,14 +60,12 @@ CREATE TABLE `tb_turmas` (
 
 INSERT INTO `tb_alunos` (`id`, `nome`, `curso`, `turma`) VALUES
 (1, 'MARIA EDUARDA DA SILVA', 'INFORMÁTICA - EMI', 'INFO18'),
-(11, 'ANA PAULA GOMES SILVA', 'TÉCNICO EM MEIO AMBIENTE', 'MAMB20'),
-(12, 'RENATO ALBERTO TELLES GOMES', 'INFORMÁTICA-EMI', 'INFO18'),
-(13, 'DANIEL DA SILVA SOUZA JR', 'MECÂNICA - EMI', 'MEC15'),
-(14, 'WELLINGTON DIAS ARAUJO E SILVA', 'MECÂNICA - EMI', 'MEC17'),
-(15, 'MARCOS AURÉLIO', 'INFORMÁTICA - EMI', 'INFO14'),
-(28, 'FABIO GILBERTO', 'TADS', 'TADS15'),
-(29, 'NATÁLIA BIA DE OLIVEIRA', 'TÉCNICO EM MECÂCICA', 'MEC19'),
-(30, 'PÉRICLES RODRIGO SILVEIRA', 'LICENCIATURA EM CIÊNCIAS SOCIAIS', 'CS18');
+(2, 'ANA PAULA GOMES SILVA', 'TÉCNICO EM MEIO AMBIENTE', 'MAMB20'),
+(3, 'RENATO ALBERTO TELLES GOMES', 'INFORMÁTICA-EMI', 'INFO18'),
+(4, 'DANIEL DA SILVA SOUZA JR', 'MECÂNICA - EMI', 'MEC15'),
+(5, 'WELLINGTON DIAS ARAUJO E SILVA', 'MECÂNICA - EMI', 'MEC17'),
+(6, 'MARCOS AURÉLIO', 'INFORMÁTICA - EMI', 'INFO14'),
+(7, 'FABIO GILBERTO', 'TADS', 'TADS15');
 
 --
 -- Indexes for dumped tables

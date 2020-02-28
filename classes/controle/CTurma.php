@@ -81,7 +81,7 @@
 
             if($_POST['nome'] != "" && $_POST['ano'] != "") {
 
-                $dados_aluno = array("nome" => mb_strtoupper($_POST['nome'], 'UTF-8'),
+                $dados_turma = array("nome" => mb_strtoupper($_POST['nome'], 'UTF-8'),
                   "ano" => mb_strtoupper($_POST['ano'], 'UTF-8')
                 );
 
