@@ -132,10 +132,14 @@
 
             while($objAluno = $alunos->fetchObject()) {
 
+                $listCurso = CCurso::procuraCurso($objAluno->curso);
+                $listTurma = CTurma::procuraTurma($objAluno->turma);
+
+
             	echo "<tr>";
                     echo "<td>".$objAluno->nome."</td>";
-                    echo "<td>".$objAluno->curso."</td>";
-                    echo "<td>".$objAluno->turma."</td>";
+                    echo "<td>".$listCurso->nome."</td>";
+                    echo "<td>".$listTurma->nome.' '.$listTurma->ano."</td>";
 
 					echo "<td>";
 						echo "<button type='submit' name='acao' value='alterar/".$objAluno->id."'>";
@@ -148,5 +152,6 @@
 					echo "</td>";
 				echo "</tr>";
     		}
-    	}
+        }
+        
     }

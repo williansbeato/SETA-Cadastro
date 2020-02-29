@@ -148,5 +148,17 @@
 					echo "</td>";
 				echo "</tr>";
     		}
-    	}
+        }
+        
+        public static function listaCurso() {
+
+            return Curso::getCurso();
+
+        }
+        public static function procuraCurso($id) {
+
+            return Curso::findCurso($id);
+
+        }
+
     }

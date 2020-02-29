@@ -5,6 +5,10 @@
     if( !empty($_POST['form_submit']) ) {
         CAluno::rota();
     }
+
+
+    $curso = CCurso::listaCurso();
+    $turma = CTurma::listaTurma();
 ?>
 
 <!DOCTYPE html>
@@ -59,14 +63,47 @@
                     <label>Nome: </label>
                     <input type="text" name="nome" class="form-control">
                 </div>
+
+                <div class="col-sm-3">
+                  
+                  <label>Curso: </label>
+                  
+                  <?php 
+                      echo "<select  class='form-control' name='curso'>";
+                      while($ObjCurso = $curso->fetchObject()) {
+                          echo "<option value='$ObjCurso->id'>$ObjCurso->nome</option>";
+                      }
+                      echo "</select>";
+                  ?>
+
+                </div>
+
+
+                <div class="col-sm-3">
+                    <label>Turma: </label>
+                    <?php 
+                        echo "<select name='turma' class='form-control'>";
+                        while($ObjTurma = $turma->fetchObject()) {
+                            echo "<option value='$ObjTurma->id'>$ObjTurma->nome $ObjTurma->ano</option>";
+                        }
+                        echo "</select>";
+                    ?>               
+                </div>
+
+
+                <!-- $ObjTurma->ano -->
+<!-- 
                 <div class="col-sm-3">
                     <label>Curso: </label>
                     <input type="text" name="curso" class="form-control">
-                </div>
-                <div class="col-sm-3">
+                </div> -->
+
+
+
+                <!-- <div class="col-sm-3">
                     <label>Turma: </label>
                     <input type="text" name="turma" class="form-control">
-                </div>
+                </div> -->
             </div>
             <br>
             <button type="submit" name="acao" value="confirmar/0" class="btn btn-success btn-block">

@@ -145,5 +145,16 @@
 					echo "</td>";
 				echo "</tr>";
     		}
-    	}
+        }
+        
+        public static function listaTurma() {
+
+            return Turma::getTurma();
+
+        }
+        public static function procuraTurma($id) {
+
+            return Turma::findTurma($id);
+
+        }
     }
