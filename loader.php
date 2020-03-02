@@ -6,7 +6,7 @@
     include_once 'global.php';
 
     // Verifica se o modo DEBUG está ativado
-    if ( config::DEBUG == false ) {
+    if ( config::DEBUG == TRUE ) {
     	// Esconde todos os erros
     	error_reporting(0);
     	ini_set("display_errors", 0);

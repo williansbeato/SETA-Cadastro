@@ -5,6 +5,9 @@
     if( !empty($_POST['form_submit']) ) {
         CAluno::rota();
     }
+
+    $curso = CCurso::listaCurso();
+    $turma = CTurma::listaTurma();
 ?>
 
 <!DOCTYPE html>
@@ -63,12 +66,56 @@
                     <input type="text" name="nome" value="<?php echo $_GET['nome']; ?>" class="form-control">
                 </div>
                 <div class="col-sm-3">
-                    <label>Curso: </label>
-                    <input type="text" name="curso" value="<?php echo $_GET['curso']; ?>" class="form-control">
+
+                  <label>Curso: </label>
+
+                  <?php 
+
+                    echo "<select class='form-control' name='curso'>";
+
+                    while($ObjCurso = $curso->fetchObject()) {
+
+                      if($_GET['curso']== $ObjCurso->id){
+
+                        echo "<option selected value='$ObjCurso->id'>$ObjCurso->nome</option>";
+
+                      }else{
+
+                        echo "<option value='$ObjCurso->id'>$ObjCurso->nome</option>";
+
+                      }
+
+                    }
+
+                    echo "</select>";
+
+                  ?>
+
                 </div>
                 <div class="col-sm-3">
-                    <label>Turma: </label>
-                    <input type="text" name="turma" value="<?php echo $_GET['turma']; ?>" class="form-control">
+                  <label>Turma: </label>
+                    
+                  <?php 
+                  
+                    echo "<select class='form-control' name='turma'>";
+
+                    while($ObjTurma = $turma->fetchObject()) {
+
+                      if($_GET['turma']== $ObjTurma->id){
+
+                        echo "<option selected value='$ObjTurma->id'>$ObjTurma->nome $ObjTurma->ano</option>";
+
+                      }else{
+
+                        echo "<option value='$ObjTurma->id'>$ObjTurma->nome  $ObjTurma->ano</option>";
+
+                      }
+
+                    }
+
+                    echo "</select>";
+
+                  ?>
                 </div>
             </div>
             <br>
